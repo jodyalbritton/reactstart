@@ -1,5 +1,13 @@
 # React Start
+Simple boilerplate react setup to get started. 
 
-yarn install
+## Getting Started
+You can either use yarn or npm. I created the project with yarn and that is what the instructions will use. 
 
-yarn start
+1. Install dependencies
+
+`yarn install`
+
+2. Run 
+
+`yarn start`
