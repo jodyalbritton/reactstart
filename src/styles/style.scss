@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300');
+
+html { font-family: 'Roboto', sans-serif; }
+
+body {
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #444D58;
+    background-color: #EFF3F8;
+}
+
+.container-fluid {
+  @media screen and (max-width: 700px) {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+}
