@@ -4,6 +4,9 @@ import Grid from 'material-ui/Grid'
 import Paper from 'material-ui/Paper'
 
 class Home extends Component {
+  // Home Container
+  // See /src/routes/index
+
   render() {
     return (
         <div className="body-wrapper">
@@ -24,6 +27,8 @@ class Home extends Component {
   }
 }
 
+
+// Map the router state to props
 const mapStateToProps = state => ({
   pathname: state.router.location.pathname,
   search: state.router.location.search,

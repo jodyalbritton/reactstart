@@ -8,6 +8,10 @@ import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 
 class App extends Component {
+  // Main app container component
+  // Child components will render inside based on the current route
+  // See /src/routes/index
+
   props: {
     sessionsActions: Function,
     session: Object,

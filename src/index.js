@@ -1,28 +1,28 @@
 // Import react parts
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React                                     from 'react'
+import ReactDOM                                  from 'react-dom'
 
 // Wrap everything in this for hot reloading
-import { AppContainer } from 'react-hot-loader'
+import { AppContainer }                          from 'react-hot-loader'
 
 // Import redux and connect it to react
 import { createStore, applyMiddleware, compose } from 'redux'
-import { Provider } from 'react-redux'
-import thunkMiddleware                  from 'redux-thunk'
-import { createLogger }                  from 'redux-logger'
+import { Provider }                              from 'react-redux'
+import thunkMiddleware                           from 'redux-thunk'
+import { createLogger }                          from 'redux-logger'
 // Import Reducers
-import reducers from './reducers'
+import reducers                                  from './reducers'
 
 // Import router middleware and history for routing
-import { routerMiddleware, connectRouter } from 'connected-react-router'
-import { createBrowserHistory } from 'history'
+import { routerMiddleware, connectRouter }       from 'connected-react-router'
+import { createBrowserHistory }                  from 'history'
 
 // Build the app root
-import AppRoot from './containers/appRoot'
+import AppRoot                                   from './containers/appRoot'
 
 // Add tap events and init material UI
-import injectTapEventPlugin from 'react-tap-event-plugin'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import injectTapEventPlugin                      from 'react-tap-event-plugin'
+import MuiThemeProvider                          from 'material-ui/styles/MuiThemeProvider'
 
 // We need to reset styles
 import "normalize.css/normalize.css"

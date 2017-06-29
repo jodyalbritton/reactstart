@@ -7,6 +7,9 @@ import IconButton from 'material-ui/IconButton'
 import MenuIcon from 'material-ui-icons/Menu'
 
 class Header extends React.Component {
+  // Header component
+  // Functional stateless component
+  // needs two props: title(string) value and the toggle function for the sidebar
 
   props: {
     title: String,
@@ -27,7 +30,9 @@ class Header extends React.Component {
           <IconButton color="contrast" aria-label="Menu" onTouchTap={::this.handleSidebarLeft}>
             <MenuIcon />
           </IconButton>
-          <Typography type="title" color="inherit" className="appbar-typo">Title</Typography>
+          <Typography type="title" color="inherit" className="appbar-typo">
+            {this.props.title}
+          </Typography>
           <Button color="contrast">Login</Button>
         </Toolbar>
         </AppBar>

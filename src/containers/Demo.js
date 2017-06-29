@@ -4,6 +4,9 @@ import Grid from 'material-ui/Grid'
 import Paper from 'material-ui/Paper'
 
 class Demo extends Component {
+  // Demo Container
+  // See /src/routes/index
+  
   render() {
     return (
         <div className="body-wrapper">

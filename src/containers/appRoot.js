@@ -6,12 +6,12 @@ import routes from '../routes'
 // @flow
 
 const AppRoot = ({ history }) => {
+  // AppRoot component
+  // Enables the connected router and history
   return (
-    <div className="main-app">
       <ConnectedRouter history={history}>
         { routes }
       </ConnectedRouter>
-    </div>
   )
 }
 
