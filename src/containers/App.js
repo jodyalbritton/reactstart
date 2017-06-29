@@ -8,6 +8,11 @@ import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 
 class App extends Component {
+  props: {
+    sessionsActions: Function,
+    session: Object,
+    children: Object,
+  }
 
   handleToggle(){
     this.props.sessionsActions.toggleSidebar(!this.props.session.sidebar)

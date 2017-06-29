@@ -9,7 +9,7 @@ import { AppContainer } from 'react-hot-loader'
 import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 import thunkMiddleware                  from 'redux-thunk'
-
+import { createLogger }                  from 'redux-logger'
 // Import Reducers
 import reducers from './reducers'
 
@@ -31,7 +31,14 @@ import "normalize.css/normalize.css"
 import "./styles/style.scss"
 
 
+// Let's have some logging to the console
 
+const loggerMiddleware = createLogger({
+    level: 'info',
+    collapsed: true,
+})
+
+// This is needed to register touch and tap events for material ui
 injectTapEventPlugin()
 
 
@@ -43,6 +50,7 @@ const store = createStore(
   composeEnhancer(
     applyMiddleware(
       thunkMiddleware,
+      loggerMiddleware,
       routerMiddleware(history),
     ),
   ),

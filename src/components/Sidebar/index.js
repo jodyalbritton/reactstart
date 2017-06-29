@@ -1,8 +1,7 @@
 import React     from 'react'
-import MenuItem  from 'material-ui/MenuItem'
 import Drawer    from 'material-ui/Drawer'
-import AppBar    from 'material-ui/AppBar'
 import { NavLink }  from 'react-router-dom'
+import List, { ListItem, ListItemText } from 'material-ui/List'
 
 class Sidebar extends React.Component {
 
@@ -14,24 +13,28 @@ class Sidebar extends React.Component {
     render() {
         return (
           <div>
-            <Drawer open={this.props.sidebar} docked={false} className="app-drawer" onRequestChange={this.props.toggleDrawer}>
-              <AppBar showMenuIconButton={false} />
-              <NavLink className="nav-link"
-                activeClassName="active"
-                to="/">
-                <MenuItem onTouchTap={this.props.toggleDrawer}>
-                  Home
-                </MenuItem>
-              </NavLink>
+            <Drawer
+              open={this.props.sidebar}
+              docked={false}
+              className="app-drawer"
+              onRequestClose={this.props.toggleDrawer}>
+              <List className="side-list">
+                <NavLink className="nav-link"
+                  activeClassName="active"
+                  to="/">
+                  <ListItem button onTouchTap={this.props.toggleDrawer}>
+                    <ListItemText primary="Home" />
+                  </ListItem>
+                </NavLink>
 
-              <NavLink className="nav-link"
-                activeClassName="active"
-                to="/demo">
-                <MenuItem onTouchTap={this.props.toggleDrawer}>
-                  Demo
-                </MenuItem>
-              </NavLink>
-
+                <NavLink className="nav-link"
+                  activeClassName="active"
+                  to="/demo">
+                  <ListItem button onTouchTap={this.props.toggleDrawer}>
+                    <ListItemText primary="Demo" />
+                  </ListItem>
+                </NavLink>
+              </List>
             </Drawer>
           </div>
         )

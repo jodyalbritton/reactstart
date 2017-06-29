@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { ConnectedRouter } from 'connected-react-router'
 import routes from '../routes'
 
+// @flow
+
 const AppRoot = ({ history }) => {
   return (
     <div className="main-app">

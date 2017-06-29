@@ -1,12 +1,24 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
+import Grid from 'material-ui/Grid'
+import Paper from 'material-ui/Paper'
 
 class Demo extends Component {
   render() {
     return (
-        <div>
-          Hello World
+        <div className="body-wrapper">
+          <Grid container>
+            <Grid item xs={12} sm={12} md={6}>
+              <Paper className="body-content">
+                Demo Column #1
+              </Paper>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6}>
+              <Paper className="body-content">
+                Demo Column #2
+              </Paper>
+            </Grid>
+          </Grid>
         </div>
     )
   }
@@ -18,8 +30,5 @@ const mapStateToProps = state => ({
   hash: state.router.location.hash,
 })
 
-const mapDispatchToProps = dispatch => ({
-  // map stuff to props
-})
 
-export default connect(mapStateToProps, mapDispatchToProps)(Demo)
+export default connect(mapStateToProps)(Demo)
