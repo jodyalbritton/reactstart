@@ -22,7 +22,8 @@ import AppRoot                                   from './containers/appRoot'
 
 // Add tap events and init material UI
 import injectTapEventPlugin                      from 'react-tap-event-plugin'
-import MuiThemeProvider                          from 'material-ui/styles/MuiThemeProvider'
+import { MuiThemeProvider }                      from 'material-ui/styles'
+import theme                                     from './theme'
 
 // We need to reset styles
 import "normalize.css/normalize.css"
@@ -61,7 +62,7 @@ const render = () => {
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
-        <MuiThemeProvider>
+        <MuiThemeProvider theme={theme}>
           <AppRoot history={history} />
         </MuiThemeProvider>
       </Provider>
