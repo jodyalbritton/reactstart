@@ -1,5 +1,5 @@
 # React Start
-Simple boilerplate react setup to get started. 
+Simple boilerplate react setup to get started.
 
 Material UI Docs
 
@@ -17,6 +17,4 @@ You can either use yarn or npm. I created the project with yarn and that is what
 
 `yarn start`
 
-3. Vist
-
-`http://localhost:3000`
+3. Vist http://localhost:3000
